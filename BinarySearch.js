@@ -4,7 +4,7 @@ function binarySearch(arr, value) {
 	let min = 0;
 	let max = arr.length - 1;
 
-	while (arr[middle] !== value) {
+	while (arr[middle] !== value && start <= end) {
 		let middle = Math.floor((min + max) / 2);
 		if (value < arr[middle]) {
 			let max = middle - 1;
@@ -13,5 +13,8 @@ function binarySearch(arr, value) {
 		}
 		middle = Math.floor((min + max) / 2);
 	}
-	return middle;
+	if (arr[middle] == value) {
+		return middle;
+	}
+	return -1;
 }
