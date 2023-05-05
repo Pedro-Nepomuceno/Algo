@@ -4,14 +4,14 @@ function binarySearch(arr, value) {
 	let min = 0;
 	let max = arr.length - 1;
 
-	while (min < max) {
-		let middle = Math.floor(min + max / 2);
-		if (value > middle) {
-			let min = middle;
-		} else if (value < middle) {
-			let max = middle;
+	while (arr[middle] !== value) {
+		let middle = Math.floor((min + max) / 2);
+		if (value < arr[middle]) {
+			let max = middle - 1;
+		} else {
+			let min = middle + 1;
 		}
-		return middle;
+		middle = Math.floor((min + max) / 2);
 	}
-	return -1;
+	return middle;
 }
