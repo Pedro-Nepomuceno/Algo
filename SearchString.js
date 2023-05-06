@@ -11,6 +11,7 @@ function findMatchinglong(long, short) {
 			}
 			if (j === short.length - 1) {
 				counter++;
+				console.log(counter);
 			}
 		}
 	}
