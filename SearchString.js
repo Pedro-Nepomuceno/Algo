@@ -8,11 +8,9 @@ function findMatchinglong(long, short) {
 		for (let j = 0; j <= short.length; j++) {
 			if (short[j] !== long[i + j]) {
 				break;
-				console.log(j);
 			}
 			if (j === short.length - 1) {
 				counter++;
-				console.log(counter);
 			}
 		}
 	}
