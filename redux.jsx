@@ -22,7 +22,6 @@ const Counter = () => {
 	const decrement = () => {
 		dispatch({ type: "DECREMENT" });
 	};
-
 	return (
 		<div>
 			<p>Count: {state.count}</p>
