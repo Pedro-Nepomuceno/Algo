@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
 
+//In this example, useReducer is used to manage the state of a counter
+
 // Reducer function
 const reducer = (state, action) => {
 	switch (action.type) {
