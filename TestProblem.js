@@ -54,7 +54,7 @@ class ExpectFunctions {
 	}
 	toBe(expected) {
 		if (this.actual !== expected) {
-			throw `expected ${this.stringfiedActual} to be ${JSON.stringy(
+			throw `expected ${this.stringfiedActual} to be ${JSON.stringify(
 				expected
 			)})`;
 		}
@@ -63,7 +63,7 @@ class ExpectFunctions {
 		if (typeof this.actual !== type) {
 			throw `expected ${
 				this.stringfiedActual
-			} to be type ${type} but got ${typeof this.actual}`;
+			} to be of type ${type} but got ${typeof this.actual}`;
 		}
 	}
 }
