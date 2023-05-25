@@ -45,7 +45,7 @@ function expect(actual) {
 class ExpectFunctions {
 	constructor(actual) {
 		this.actual = actual;
-		this.stringfiedActual = JSON.stringfy(actual);
+		this.stringfiedActual = JSON.stringify(actual);
 	}
 	toExist() {
 		if (this.actual == null) {
