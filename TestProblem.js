@@ -22,14 +22,14 @@ function describe(testSuiteName, func) {
 	} catch (error) {
 		const { testCaseName, errorMessage } = error;
 		console.error(
-			`failed running test suite ${testSuiteName} on` +
+			`failed running test suite ${testSuiteName} on ` +
 				`test case ${testCaseName} with error message ${errorMessage}`
 		);
 	}
 }
 
 function it(testCaseName, func) {
-	console.log(`beggining test case ${testCaseName}`);
+	console.log(`begining test case ${testCaseName}`);
 	try {
 		func();
 		console.log(`successfully completed test case ${testCaseName}`);
