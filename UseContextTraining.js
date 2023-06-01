@@ -1,9 +1,13 @@
-import React from "React";
+import React, { createContext } from "React";
 
 function Login({ setUserName }) {
 	return (
 		<>
-			<input setUserName={setUserName} />
+			<input
+				onChange={(event) => {
+					setUserName(event.target.value);
+				}}
+			/>
 		</>
 	);
 }
