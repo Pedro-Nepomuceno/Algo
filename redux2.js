@@ -28,6 +28,12 @@ function useFetch(url) {
 			const response = await fetch(url);
 			const newResponseJSON = response.json();
 			if (shouldCancel) return;
+			dispatch({ type: "success", responseJSON: newResponseJSON });
 		};
-	}, []);
+		callFetch();
+		return () => {
+			shouldCancel = true;
+		};
+	}, [url]);
+	return state;
 }
