@@ -24,3 +24,8 @@ function same(arr1, arr2) {
 	}
 	return true;
 }
+
+[2, 3, 5, 6];
+
+let obj = { 2: 1, 3: 1, 5: 1, 6: 1 };
+let obj2 = { 4: 1, 9: 1, 25: 1, 36: 1 };
