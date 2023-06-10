@@ -17,3 +17,21 @@ function debounce(callback, delay = 2000) {
 		}, delay);
 	};
 }
+// debounce from algoExpert.io
+
+function debounce(callback, delay, immediate = false) {
+	let timer;
+	return function (...args) {
+		clearTimeout(timer);
+		const checkImmediate = timer == null && immediate;
+		if (checkImmediate) {
+			callback.apply(this, args);
+		}
+		timer = setTimeout(() => {
+			if (!immediate) {
+				callback.apply(this, args);
+			}
+			timer = null;
+		}, delay);
+	};
+}

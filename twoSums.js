@@ -24,4 +24,3 @@ function twoNumberSum(array, targetSum) {
 		} else emptyArr[val] = true;
 	}
 	return [];
-}
