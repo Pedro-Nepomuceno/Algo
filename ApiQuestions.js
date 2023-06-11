@@ -17,5 +17,6 @@ function getQuestionsAndSubmissions() {
 		const getSubmission = async () => {
 			return fetch(SUBMISSIONS_API_BASE_URL);
 		};
+		const [questions, submission] = Promise.all([getQuestions, getSubmission]);
 	}, []);
 }
