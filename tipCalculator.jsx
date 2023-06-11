@@ -14,6 +14,8 @@ export default function TipCalculator() {
 	const handleChangePeople = (e) => {
 		setNumberPeople(e.target.value);
 	};
+	const totalTip = ((bill * tip) / 100).toFixed();
+	const personPerTip = tip / people;
 
 	return (
 		<>
@@ -35,12 +37,13 @@ export default function TipCalculator() {
 			<label htmlFor="people">Number of People</label>
 			<input
 				id="people"
+				min="1"
 				value={bill}
 				type="number"
 				onChange={handleChangePeople}
 			/>
-			<p>Total tip {}</p>
-			<p>Tip Per Person: {}</p>
+			<p>Total tip {totalTip}</p>
+			<p>Tip Per Person: {personPerTip}</p>
 		</>
 	);
 }
