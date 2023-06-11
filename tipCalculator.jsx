@@ -8,6 +8,12 @@ export default function TipCalculator() {
 	const handleChange = (e) => {
 		setBill(e.target.value);
 	};
+	const handleChangeTip = (e) => {
+		setTip(e.target.value);
+	};
+	const handleChangePeople = (e) => {
+		setNumberPeople(e.target.value);
+	};
 
 	return (
 		<>
