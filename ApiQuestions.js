@@ -5,15 +5,14 @@ const SUBMISSIONS_API_BASE_URL =
 	"https://api.frontendexpert.io/api/fe/submissions";
 
 export default function QuestionList() {
-	const [questions, setQuestions] = useState();
-	const [submission, setSubmission] = useState();
-
-	useEffect(() => {
-		const fetchQuestion = fetch(QUESTIONS_API_BASE_URL);
-		const questionConverter = fetchQuestion.json();
-	}, []);
-
-	useEffect(() => {}, []);
+	const [questions, submissions] = getQuestionsAndSubmissions();
 
 	return <></>;
+}
+function getQuestionsAndSubmissions() {
+	useEffect(() => {
+		const getQuestions = async () => {
+			return fetch(QUESTIONS_API_BASE_URL);
+		};
+	}, []);
 }
