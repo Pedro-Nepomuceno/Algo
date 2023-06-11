@@ -14,5 +14,8 @@ function getQuestionsAndSubmissions() {
 		const getQuestions = async () => {
 			return fetch(QUESTIONS_API_BASE_URL);
 		};
+		const getSubmission = async () => {
+			return fetch(SUBMISSIONS_API_BASE_URL);
+		};
 	}, []);
 }
