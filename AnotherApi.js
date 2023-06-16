@@ -14,7 +14,8 @@ useEffect(()=>{
     }
     catch(error){
 
-
+console.log(`error fetching data ${error}`)
+setIsloading(false);
     }
     }
 
@@ -23,6 +24,17 @@ useEffect(()=>{
     return fetchData
 },[]);
 
+return(
+
+<div>
+<ul>
+{data.map((item) =>{
+    <li key={item.id}>{item.name}</li>
+}) }
+</ul>
+</div>
+
+)
 
 
 }
