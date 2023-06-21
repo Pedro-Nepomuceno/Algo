@@ -1,7 +1,9 @@
 function sortedSquaredArray(array) {
-	const result = new Array(array.length);
-	const leftPointer = 0;
-	const rightPointer = array.length - 1;
+	let arr1 = [];
 
-	for (let i = array.length - 1; i >= 0; i--) {}
+	for (let i = 0; i <= array.length; i++) {
+		arr1.push(array[i] ** 2);
+	}
+	arr1.sort();
+	return arr1;
 }
