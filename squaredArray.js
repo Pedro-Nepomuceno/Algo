@@ -6,9 +6,9 @@ function sortedSquaredArray(array) {
 // trying optimun solution
 
 function sortedSquaredArray(array) {
+	const newArray = new Array(array.length).fill(0);
 	let leftPointer = 0;
 	let rightPointer = array.lenght - 1;
-	let arr1 = [];
 	for (let i = 0; i <= array.length; i++) {
 		if (array[i] > array[rightPointer]) {
 		} else {
