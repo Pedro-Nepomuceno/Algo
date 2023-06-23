@@ -1,17 +1,23 @@
 // given an array of pairs representing the team and the result of a game, where 0 represent that the away team won
 // and 1 represent the home team won. find the team that won the tournament
 function tournamentWinner(competitions, results) {
-	let totalResult = {};
-	let total = 0;
-	let win = "";
-	for (let i = 0; i <= results.length; i++) {
-		const winner = results[i] === 0 ? competitions[i][1] : competitions[i][0];
-		totalResult[winner] = (totalResult[winner] || 0) + 3;
-		if (total[winner] > total) {
-			total = totalResult[winner];
-			win = winner;
+	let winner = { score: 0, name: "" };
+	const scoreMap = {};
+
+	for (let i = 0; i <= competitions.length; i++) {
+		let homeTeam = competitions[i][0];
+		let awayTeam = competitions[i][1];
+
+		if (results[i] === 0) {
+			scoreMap[awayTeam] = (scoreMap[awayTeam] || 0) + 3;
+		} else {
+			scoreMap[homeTeam] = (scoreMap[homeTeam] || 0) + 3;
+		}
+		if (scoreMap[awayTeam] >= winner.score) {
+			winner = { score: scoreMap[awayTeam], name: awayTeam };
+		} else if (scoreMap[homeTeam] >= winner.score) {
+			winner = { score: scoreMap[homeTeam], name: homeTeam };
 		}
 	}
-
-	return win;
+	return winner.name;
 }
