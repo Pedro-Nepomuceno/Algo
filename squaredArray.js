@@ -10,8 +10,17 @@ function sortedSquaredArray(array) {
 	let leftPointer = 0;
 	let rightPointer = array.lenght - 1;
 	let index = array.length - 1;
-	while (leftPointer >= rightPointer) {
+	while (leftPointer <= rightPointer) {
 		let leftVal = Math.pow(array[leftPointer], 2);
 		let rightVal = Math.pow(array[rightPointer], 2);
+		if (leftVal < rightVal) {
+			newArray[index] = rightVal;
+			rightPointer--;
+		} else {
+			newArray[index] = leftVal;
+			leftPointer++;
+		}
+		index--;
 	}
+	return newArray;
 }
