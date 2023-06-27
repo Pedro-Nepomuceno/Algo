@@ -54,3 +54,5 @@ function bubbleSort2(arr) {
 	}
 	return arr;
 }
+
+//By using tempVal as an intermediary variable during the swapping process, we ensure that the elements are correctly swapped without losing any values. This helps maintain the integrity of the sorting algorithm.
