@@ -69,6 +69,8 @@ function bubbleSort2(arr) {
 	}
 	return arr;
 }
+// good to use if data is almost sorted
+
 function bubbleSort(array) {
 	let noSwap;
 	for (let i = array.length; i > 0; i--) {
