@@ -70,7 +70,9 @@ function bubbleSort2(arr) {
 	return arr;
 }
 function bubbleSort(array) {
+	let noSwap;
 	for (let i = array.length; i > 0; i--) {
+		noSwap = true;
 		for (let j = 0; j < i - 1; i++) {
 			if (array[j] > array[j + 1]) {
 				let tempVal = array[j];
