@@ -78,8 +78,10 @@ function bubbleSort(array) {
 				let tempVal = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = tempVal;
+				noSwap = false;
 			}
 		}
+		if (noSwap) break;
 	}
 	return array;
 }
