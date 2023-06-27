@@ -18,9 +18,11 @@ function bubble(array) {
 			if (array[j] > array[j + 1]) {
 				let tempVal = array[j];
 				array[j] = array[j + 1];
-				tempVal = array[j];
+				array[j + 1] = tempVal;
 			}
 		}
 	}
 	return array;
 }
+
+// to be continue
