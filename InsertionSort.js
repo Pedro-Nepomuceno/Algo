@@ -4,6 +4,10 @@
 // Repeat steps 2 and 3 for each subsequent element in the array.
 // After all elements have been processed, return the sorted array.
 function selectionSort(arr) {
+	const swap = (arr, idx1, idx2) => {
+		[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
+	};
+
 	for (let i = 0; i < arr.length; i++) {
 		let minIndex = i;
 		for (let j = i + 1; j < arr.length; j++) {
@@ -12,11 +16,7 @@ function selectionSort(arr) {
 			}
 		}
 		if (minIndex !== i) {
-			let temp = arr[i];
-
-			arr[i] = arr[minIndex];
-			console.log((arr[i] = arr[minIndex]));
-			arr[minIndex] = temp;
+			swap(arr, arr[j], arr[minIndex]);
 		}
 	}
 	return arr;
