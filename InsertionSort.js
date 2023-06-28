@@ -3,6 +3,8 @@
 // If the index of the minimum value is not the same as the current index, swap the values at the current index and the index of the minimum value.
 // Repeat steps 2 and 3 for each subsequent element in the array.
 // After all elements have been processed, return the sorted array.
+
+// selection sort is good for reducing the number of swaps, and memory save. but this is usually not that important
 function selectionSort(arr) {
 	const swap = (arr, idx1, idx2) => {
 		[arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
