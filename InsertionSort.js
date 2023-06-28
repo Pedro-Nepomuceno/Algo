@@ -16,7 +16,7 @@ function selectionSort(arr) {
 			}
 		}
 		if (minIndex !== i) {
-			swap(arr, arr[j], arr[minIndex]);
+			swap(arr, i, minIndex);
 		}
 	}
 	return arr;
