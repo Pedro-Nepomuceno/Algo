@@ -13,5 +13,15 @@ function cleanData(obj) {
 
 	for (const key in obj) {
 		const value = obj[key];
+		if (!valueCounts[value]) {
+			valueCounts[value] = 1;
+			uniqueObj[key] = value;
+		} else {
+			valueCounts[value]++;
+		}
 	}
+	return uniqueObj;
 }
+
+const removeData = cleanData(object);
+console.log(removeData);
