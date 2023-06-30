@@ -1,5 +1,5 @@
 function mergeSort(arr, arr2) {
-	let results = [];
+	let result = [];
 
 	return result;
 }
