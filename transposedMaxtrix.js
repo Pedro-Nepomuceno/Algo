@@ -5,6 +5,11 @@ input = [
 ];
 
 //expected output
+output = [
+	[2, 1, 1],
+	[4, 2, 4],
+	[6, 5, 6],
+];
 
 function transposeMatrix(matrix) {
 	let result = [];
