@@ -11,6 +11,19 @@ output = [
 	[6, 5, 6],
 ];
 
+function transposedMatrix(array) {
+	let result = [];
+
+	for (let i = 0; i < array[0].length; i++) {
+		let newRow = [];
+		for (let j = 0; j < array.length; j++) {
+			newRow.push(array[j][i]);
+		}
+		result.push(newRow);
+	}
+	return result;
+}
+
 function transposeMatrix(matrix) {
 	let result = [];
 	for (let i = 0; i < matrix[0].length; i++) {
