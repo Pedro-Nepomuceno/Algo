@@ -2,7 +2,7 @@
 
 function findClosestValueBst(tree, target) {
 	let closestValue = null;
-	let minDiff = infinity;
+	let minDiff = Infinity;
 	let node = tree;
 
 	while (node) {
