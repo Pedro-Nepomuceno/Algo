@@ -13,10 +13,10 @@ function insertionSort(arr) {
 function insertionSort(arr) {
 	for (let i = 1; i < arr.length; i++) {
 		for (let j = i; j > 0; j--) {
-			const tempVal = arr[j];
-			if (arr[i] > arr[j]) {
-				arr[j] = arr[i];
-				tempVal = arr[j];
+			if (arr[j] < arr[j - 1]) {
+				const tempVal = arr[j];
+				arr[j] = arr[j - 1];
+				arr[j - 1] = tempVal;
 			}
 		}
 	}
