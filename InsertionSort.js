@@ -8,3 +8,13 @@ function insertionSort(arr) {
 	}
 	return arr;
 }
+[6, 3, 1, 5];
+
+function insertionSort(arr) {
+	for (let i = 1; i < arr.length; i++) {
+		for (let j = 1; j > 0; j--) {
+			const tempVal = arr[i];
+		}
+	}
+	return arr;
+}
