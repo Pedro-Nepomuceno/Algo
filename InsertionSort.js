@@ -12,8 +12,12 @@ function insertionSort(arr) {
 
 function insertionSort(arr) {
 	for (let i = 1; i < arr.length; i++) {
-		for (let j = 1; j > 0; j--) {
-			const tempVal = arr[i];
+		for (let j = i; j > 0; j--) {
+			const tempVal = arr[j];
+			if (arr[i] > arr[j]) {
+				arr[j] = arr[i];
+				tempVal = arr[j];
+			}
 		}
 	}
 	return arr;
