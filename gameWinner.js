@@ -4,7 +4,7 @@ function tournamentWinner(competitions, results) {
 	let winner = { score: 0, name: "" };
 	const scoreMap = {};
 
-	for (let i = 0; i <= competitions.length; i++) {
+	for (let i = 0; i < competitions.length; i++) {
 		let homeTeam = competitions[i][0];
 		let awayTeam = competitions[i][1];
 
