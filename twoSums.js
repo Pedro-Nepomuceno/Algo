@@ -1,5 +1,10 @@
 //write a function that takes an unsorted array and a target number, the function should return an array that sums to the target number
 
+
+
+
+
+
 // not optimum solution
 function twoNumberSum(array, targetSum) {
 	let emptyArr = [];
@@ -14,13 +19,21 @@ function twoNumberSum(array, targetSum) {
 }
 
 // optimum solution
-
+//  			   [2,4,8,9]  10 	
 function twoNumberSum(array, targetSum) {
-	let emptyArr = {};
+	let map = {
+		// 2 : true
+		// 4 : true
+	};
+
+	let emptyArr = []
 	for (let val of array) {
+		//						10   -  8  = 2
 		let potentialSum = targetSum - val;
-		if (potentialSum in emptyArr) {
+		if (potentialSum in map) {
 			return [potentialSum, val];
-		} else emptyArr[val] = true;
+		} else map[val] = true;
 	}
-	return [];
+return emptyArr
+}
+
