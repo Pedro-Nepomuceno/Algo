@@ -15,3 +15,5 @@ function rvrStr (str) {
     }
     return reverseStr
 }
+
+// reduce method
