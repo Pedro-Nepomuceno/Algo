@@ -17,3 +17,7 @@ function rvrStr (str) {
 }
 
 // reduce method
+
+function reduction (str){
+    return Array.from(str).reduce((reverse, char) => reverse+char, "")
+}
