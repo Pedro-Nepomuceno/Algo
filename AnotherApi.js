@@ -36,9 +36,18 @@ return(
 
 )
 
+// [4,5,6,9] 9 
 function findPairSun(array,sum){
     let map = {};
-    
+    for(let num of array){
+        let potentialSum = sum - num;
+        if(potentialSum in map)
+        return [num, potentialSum]
+    }
+    else {
+        map[potentialSum] = true;
+    }
+
 }
 
 
