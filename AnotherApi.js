@@ -36,5 +36,10 @@ return(
 
 )
 
-
+function findPairSun(array,sum){
+    let map = {};
+    
 }
+
+
+
