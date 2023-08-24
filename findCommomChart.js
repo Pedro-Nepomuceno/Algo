@@ -11,6 +11,9 @@ for (let char of arr1){
     }
 }
     for (let char of arr2){
-        
+        if(map[char]){
+            return true
+        }
     }
+    return false
 }
