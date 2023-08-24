@@ -21,5 +21,5 @@ for (let char of arr1){
 //another example
 
 function findSameChar (arr1,arr2) {
-    
+    return arr1.some(item => arr2.include(item))
 }
