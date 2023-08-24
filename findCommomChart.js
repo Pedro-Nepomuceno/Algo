@@ -5,7 +5,12 @@
 function checkSimilar(arr1,arr2) {
     map = {};
 
-
-
-    
+for (let char of arr1){
+    if(!map[char]){
+        map[char] = true;
+    }
+}
+    for (let char of arr2){
+        
+    }
 }
