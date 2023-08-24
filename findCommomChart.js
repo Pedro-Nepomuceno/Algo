@@ -17,3 +17,9 @@ for (let char of arr1){
     }
     return false
 }
+
+//another example
+
+function findSameChar (arr1,arr2) {
+    
+}
