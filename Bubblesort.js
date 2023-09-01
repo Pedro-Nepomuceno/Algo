@@ -90,9 +90,13 @@ function bubbleSort(array) {
 
 function bubbleSort(arr) {
 	const n = arr.length;
-  
+  // length 7
+
+  //			1		6
 	for (let i = 0; i < n - 1; i++) {
 	  // Last i elements are already in place, so no need to check them
+	  //				7 - 0 - 1 = 6
+	  // 				7 - 1 - 1 = 5
 	  for (let j = 0; j < n - i - 1; j++) {
 		// Compare adjacent elements
 		if (arr[j] > arr[j + 1]) {
@@ -107,6 +111,8 @@ function bubbleSort(arr) {
   
   // Example usage
   const unsortedArray = [64, 34, 25, 12, 22, 11, 90];
+  // 34 64 25
+  // 34 25 64
   bubbleSort(unsortedArray);
   console.log(unsortedArray); // Output: [11, 12, 22, 25, 34, 64, 90]
   
