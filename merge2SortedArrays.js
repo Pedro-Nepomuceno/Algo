@@ -16,6 +16,14 @@ while(i< arr1.length && j< arr2.length){
         j++
     }
 }
-
+while(i<arr1.length){
+    result.push(arr1[i])
+    i++
+}
+while(j< arr1.length){
+    result.push(arr2[j])
+    j++
+}
+return result
 
 }
