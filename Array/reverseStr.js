@@ -7,6 +7,13 @@ function reverseStr(str){
 }
 
 
+function anotherRvrs(str){
+    // check for str or valid input
+    if(!str || str.length < 2 || typeof str !== "string"){
+        return "something went wrong"
+    }
+}
+
 // hello
 function rvrStr (str) {
     let reverseStr = "";
