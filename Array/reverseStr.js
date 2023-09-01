@@ -6,12 +6,18 @@ function reverseStr(str){
     return str.split('').reverse().join('');
 }
 
-
+// method if input is a sentence
 function anotherRvrs(str){
     // check for str or valid input
     if(!str || str.length < 2 || typeof str !== "string"){
         return "something went wrong"
     }
+    let backwards = [];
+    for(let i = str.length -1; i >= 0; i--){
+    backwards.push(str[i])
+    }
+
+    return backwards.join("")
 }
 
 // hello
