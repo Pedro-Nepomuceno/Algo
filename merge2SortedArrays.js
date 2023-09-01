@@ -1,0 +1,21 @@
+// given 2 sorted arrays, return one merge sorted array
+
+
+function mergeArrays(arr1,arr2){
+let i = 0;
+let j = 0;
+let result =[];
+
+while(i< arr1.length && j< arr2.length){
+    if(arr1[i] < arr2[j]){
+        result.push(arr1[i])
+        i++
+    }
+    else{
+        result.push(arr2[j])
+        j++
+    }
+}
+
+
+}
