@@ -10,4 +10,27 @@ class HashTable{
     return hash
     }
 
+    set(key,value){
+        let address = this._hash(key);
+        if(!this.data[address]){
+            this.data[address] = []
+        }
+        this.data[address].push([key,value])
+        return this.data
+
+    }
+
+    get(key){
+        let address = this._hash(key);
+let currentBucket = this.data[address];
+for(let i = 0; i< currentBucket.length; i++){
+    if(currentBucket[i][0] === key){
+        return currentBucket[i][1]
+    }
 }
+return undefined;
+
+    }
+}
+
+const myHash = new HashTable(50)
