@@ -12,9 +12,18 @@ class Node {
    
    
 
-newNode(){
-    const node = {
-    
+append(value){
+    const newnode = {
+    value:value,
+    next = null
     }
+    this.tail.next = newnode;
+    this.tail = newnode;
+    this.length++;
+    return this;
 }
+
+prepend(value){
+
 }
+} 
