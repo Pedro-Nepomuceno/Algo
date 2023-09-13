@@ -15,7 +15,7 @@ class Node {
 append(value){
     const newnode = {
     value:value,
-    next = null
+    next: null
     }
     this.tail.next = newnode;
     this.tail = newnode;
