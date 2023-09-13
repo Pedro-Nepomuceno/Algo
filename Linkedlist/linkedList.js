@@ -9,8 +9,6 @@ class Node {
         this.tail = this.head;
         this.length = 1;
     }
-   
-   
 
 append(value){
     const newnode = {
@@ -35,4 +33,14 @@ this.head = newnode;
 this.length++
 return this;
 }
+printeList(value){
+    let array = []
+    let currentNode = this.head;
+    while(currentNode !== null){
+        array.push(currentNode)
+        currentNode = currentNode.next
+    }
+    return array;
+}
+
 } 
