@@ -26,6 +26,13 @@ append(value){
 }
 
 prepend(value){
-
+const newnode = {
+    value: value,
+    next: null,
+}
+newnode.next = this.head;
+this.head = newnode;
+this.length++
+return this;
 }
 } 
