@@ -17,7 +17,9 @@ append(value){
     value:value,
     next: null
     }
+    // instead of this.next point to null it will point to the new node;
     this.tail.next = newnode;
+    // set the new node to be the new tail
     this.tail = newnode;
     this.length++;
     return this;
