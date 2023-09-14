@@ -33,6 +33,12 @@ this.head = newnode;
 this.length++
 return this;
 }
+insert(index,value){
+    const newNode = {
+        value: value,
+        next: null,
+    }
+}
 printeList(value){
     let array = []
     let currentNode = this.head;
