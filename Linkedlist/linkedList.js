@@ -38,6 +38,19 @@ insert(index,value){
         value: value,
         next: null,
     }
+    const getLeader = findNodeIndex(index-1)
+}
+
+// 2 ---> 3 ---> 4 ---> 5 
+
+findNodeIndex(index){
+    let counter = 0;
+    let currentNode = this.head
+    while(index < this.length){
+currentNode = currentNode.next;
+counter++
+    }
+    return counter
 }
 printeList(value){
     let array = []
