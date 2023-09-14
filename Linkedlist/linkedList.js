@@ -49,11 +49,11 @@ insert(index,value){
 findNodeIndex(index){
     let counter = 0;
     let currentNode = this.head
-    while(counter < index){
+    while(counter !== index){
 currentNode = currentNode.next;
 counter++
     }
-    return counter
+    return currentNode
 }
 printeList(value){
     let array = []
