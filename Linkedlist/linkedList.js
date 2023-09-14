@@ -39,14 +39,17 @@ insert(index,value){
         next: null,
     }
     const getLeader = findNodeIndex(index-1)
+    let nextNode = getLeader.next;//4 
+    getLeader.next = this.value;
+    this.value.next = nextNode;
 }
 
 // 2 ---> 3 ---> 4 ---> 5 
-
+                //2 
 findNodeIndex(index){
     let counter = 0;
     let currentNode = this.head
-    while(index < this.length){
+    while(counter < index){
 currentNode = currentNode.next;
 counter++
     }
