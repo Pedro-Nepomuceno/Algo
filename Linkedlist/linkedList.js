@@ -58,8 +58,9 @@ counter++
     return currentNode
 }
 
-remove(node){
-    
+remove(index){
+const leader = this.findNodeIndex(index-1)
+const unwantedNode = leader.next;
 }
 printeList(value){
     let array = []
