@@ -61,6 +61,9 @@ counter++
 remove(index){
 const leader = this.findNodeIndex(index-1)
 const unwantedNode = leader.next;
+leader.next = unwantedNode.next;
+this.length--
+return this.printeList
 }
 printeList(value){
     let array = []
