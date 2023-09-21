@@ -38,10 +38,12 @@ insert(index,value){
         value: value,
         next: null,
     }
-    const getLeader = findNodeIndex(index-1)
-    let nextNode = getLeader.next;//4 
-    getLeader.next = this.value;
-    this.value.next = nextNode;
+    const getLeader = this.findNodeIndex(index-1)
+    let holdingPointer = getLeader.next;//4 
+    getLeader.next = newNode;
+    newNode.next = holdingPointer;
+    this.length++
+    return this
 }
 
 // 2 ---> 3 ---> 4 ---> 5 
@@ -54,6 +56,10 @@ currentNode = currentNode.next;
 counter++
     }
     return currentNode
+}
+
+remove(node){
+    
 }
 printeList(value){
     let array = []
