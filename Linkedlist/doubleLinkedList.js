@@ -35,5 +35,32 @@ prepend(value){
     this.length++
     return this
 }
+//   [ 2 , 5 , 7 , 8 ]
+
+insert(index,value){
+    const newNode = {
+    value:value,
+    next:null,
+    prev:null
+    }
+    const leader = this.traverseToIndex(index-1)
+    const holdingPointer = leader.next;
+    leader.next = newNode
+    newNode.prev = leader
+    newNode.next = holdingPointer
+    holdingPointer.prev = newNode;
+
+}
+
+traverseToIndex(index){
+let count = 0;
+let currentNode = this.head
+
+while (count !== index){
+currentNode = currentNode.next
+count++
+}
+return currentNode;
+}
 
 }
