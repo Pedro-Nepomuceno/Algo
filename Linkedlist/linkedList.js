@@ -1,3 +1,22 @@
+// exercise - Reverse a single linkedlist: 
+
+// [ 3 , 4 , 6 ,  7 , 9]
+
+function reverselLinkedList(){
+   
+    let first = this.head;
+    let second = first.next;
+    while(second){
+        const temp = second.next;
+        second.next = first;
+        first = second;
+        second = temp
+    }
+}
+
+
+
+
 // create new linkedList 
 
 class Node {
