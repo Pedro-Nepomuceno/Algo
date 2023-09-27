@@ -12,6 +12,11 @@ class QueueUsingStacks{
     this.pushStack.push(value)
     }
     pop(){
-if(!this.)
+if(!this.popStack){
+while(this.pushStack.length){
+    this.popStack.push(this.pushStack.pop())
+
+}
+}
     }
 }
