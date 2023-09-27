@@ -6,6 +6,12 @@ class QueueUsingStacks{
         this.popStack = [];
     }
     peek(){
+        if(!this.popStack){
+            while(this.pushStack.length){
+                this.popStack.push(this.pushStack.pop())
+            
+            }
+            return this.popStack[this.popStack.length-1]
 
     }
     push(value){
@@ -17,6 +23,7 @@ while(this.pushStack.length){
     this.popStack.push(this.pushStack.pop())
 
 }
+return this.popStack.pop()
 }
     }
 }
