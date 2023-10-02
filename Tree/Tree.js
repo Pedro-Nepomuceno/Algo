@@ -2,3 +2,10 @@
 // organizing this way we have half of the data in the bottom level. 
 // this way we can avoid visiting every node
  
+class Tree {
+constructor(){
+    this.value = value;
+    this.left = null;
+    this.right = null;
+}
+}
