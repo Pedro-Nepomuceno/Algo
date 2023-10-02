@@ -19,8 +19,26 @@ class BinaryTree{
         if(this.root === null){
                this.root = newTree
         }
-        if(newTree.value>this.root){
-            this.newTree.right 
+       else{
+        let currentNode = this.root;
+        while(true){
+            if(value < currentNode){
+                // left
+                if(!currentNode.left){
+                    this.currentNode.left = newTree;
+                    return this
+                }
+                currentNode = currentNode.left
+            }
+            else{
+                //right
+                if(!currentNode.right){
+                    currentNode.right = newTree
+                    return this
+                }
+                currentNode = currentNode.right
+            }
         }
+       }
     }
 }
