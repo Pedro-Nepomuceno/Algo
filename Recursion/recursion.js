@@ -1,7 +1,7 @@
 // reverse the string using recursion
 
 function reverseString(str){
-    if(str === 0) return  "";
+    if(str.length === 0) return  "";
     
-    return str[str.length-1] + reverseString(slice(0,str.length-1))
+    return str[str.length-1] + reverseString(str.slice(0,str.length-1))
 }
