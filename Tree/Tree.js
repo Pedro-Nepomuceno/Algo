@@ -2,10 +2,25 @@
 // organizing this way we have half of the data in the bottom level. 
 // this way we can avoid visiting every node
  
-class Tree {
-constructor(){
+class Node {
+constructor(value){
     this.value = value;
     this.left = null;
     this.right = null;
 }
+}
+
+class BinaryTree{
+    constructor(){
+        this.root = null;
+    }
+    insert(value){
+        const newTree = new Node(value)
+        if(this.root === null){
+               this.root = newTree
+        }
+        if(newTree.value>this.root){
+            this.newTree.right 
+        }
+    }
 }
