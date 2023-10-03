@@ -65,5 +65,30 @@ return false
         if(!this.root){
             return false
         }
+        let currentNode = this.root;
+        let parentNode = null;
+        while(currentNode){
+            if(value < currentNode){
+                currentNode = currentNode.left;
+                parentNode = this.root;
+            }
+            else if(value > currentNode){
+                currentNode = currentNode.right
+                parentNode = this.root
+            }
+            else if( value === currentNode.value){
+                //logic 
+
+                if(currentNode.right === null){
+
+                }
+                else if(currentNode.left === null){
+
+                }
+                else{
+                    
+                }
+            }
+        }
     }
 }
