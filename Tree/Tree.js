@@ -47,6 +47,14 @@ class BinaryTree{
             return false 
         }
         let currentNode = this.root;
+        while(currentNode){
+            if(value < currentNode){
+                currentNode = currentNode.left
+            }
+            else if(value > currentNode){
+                currentNode = currentNode.rigth
+            }
+        }
 
     }
 }
