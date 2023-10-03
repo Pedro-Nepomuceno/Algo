@@ -54,7 +54,10 @@ class BinaryTree{
             else if(value > currentNode){
                 currentNode = currentNode.rigth
             }
+            else if( value == currentNode){
+                return currentNode
+            }
         }
-
+return false
     }
 }
