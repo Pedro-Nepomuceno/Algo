@@ -25,7 +25,7 @@ class BinaryTree{
             if(value < currentNode){
                 // left
                 if(!currentNode.left){
-                    this.currentNode.left = newTree;
+                    currentNode.left = newTree;
                     return this
                 }
                 currentNode = currentNode.left
@@ -40,5 +40,13 @@ class BinaryTree{
             }
         }
        }
+    }
+
+    lookup(value){
+        if(!this.root){
+            return false 
+        }
+        let currentNode = this.root;
+
     }
 }
