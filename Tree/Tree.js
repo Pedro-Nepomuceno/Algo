@@ -70,11 +70,11 @@ return false
         while(currentNode){
             if(value < currentNode){
                 currentNode = currentNode.left;
-                parentNode = this.root;
+                parentNode = currentNode;
             }
             else if(value > currentNode){
                 currentNode = currentNode.right
-                parentNode = this.root
+                parentNode = currentNode;
             }
             else if( value === currentNode.value){
                 //logic 
@@ -86,7 +86,7 @@ return false
 
                 }
                 else{
-                    
+
                 }
             }
         }
