@@ -80,7 +80,17 @@ return false
                 //logic 
 
                 if(currentNode.right === null){
-
+                    if(parentNode === null){
+                        this.root = currentNode.left
+                    }
+                    else{
+                        if(currentNode.value < parentNode.value){
+                            parentNode.left = currentNode.left
+                        }
+                        else if(currentNode.value > parentNode.value){
+                            parentNode.right = currentNode.left
+                        }
+                    }
                 }
                 else if(currentNode.left === null){
 
