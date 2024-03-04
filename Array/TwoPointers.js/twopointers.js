@@ -2,8 +2,8 @@
 
 // traverse the array. every time I find a zero, switch places
 function moveTheZero(array) {
-  let right = 0;
-  let left = 0;
+  let right = 3;
+  let left = 2;
 
   // [1 , 0 , 3 , 5 ]
   while (right < array.length) {
