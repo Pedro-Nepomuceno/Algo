@@ -2,7 +2,7 @@
 
 const isValid = function (string) {
   const stack = [];
-  const parens = "() {} [] ";
+  const parens = "() {} []";
   let i = 0;
 
   while (i < string.length) {
