@@ -19,3 +19,4 @@ const isValid = function (string) {
   }
   return stack.length === 0;
 };
+// another solution
