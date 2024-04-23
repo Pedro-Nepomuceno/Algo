@@ -33,10 +33,20 @@ const validParenthesis = (s) => {
     "(": ")",
     "[": "]",
   };
-  let i = 0;
   const stack = [];
-  while (s.length < i) {
-    stack.push(s[i]);
-    i++;
+  for (let i = 0; i < s.length; i++) {
+    let br = [s[i]];
+    if (map[br]) {
+      stack.push(br);
+    } else {
+      let checkBracket = stack.pop();
+      if (map[checkBracket] !== br) {
+        return false;
+      }
+    }
   }
+  if (stack.length > 0) {
+    return false;
+  }
+  return true;
 };
