@@ -20,3 +20,23 @@ const isValid = function (string) {
   return stack.length === 0;
 };
 // another solution
+
+const validParenthesis = (s) => {
+  if (s == "") {
+    return true;
+  }
+  if (s.length < 2) {
+    return false;
+  }
+  const map = {
+    "[": "]",
+    "(": ")",
+    "[": "]",
+  };
+  let i = 0;
+  const stack = [];
+  while (s.length < i) {
+    stack.push(s[i]);
+    i++;
+  }
+};
