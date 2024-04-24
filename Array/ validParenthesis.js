@@ -20,7 +20,7 @@ const isValid = function (string) {
   return stack.length === 0;
 };
 // another solution
-
+// longer solution
 const validParenthesis = (s) => {
   if (s == "") {
     return true;
