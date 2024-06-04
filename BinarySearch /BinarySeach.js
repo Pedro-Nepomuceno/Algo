@@ -8,7 +8,7 @@ function lookForTarget(arr, target) {
   let last = arr.length - 1;
 
   while (first <= last) {
-    let middle = Math.floor(first + last / 2);
+    let middle = Math.floor((first + last) / 2);
     if (middle == target) {
       return middle;
     }
@@ -20,5 +20,26 @@ function lookForTarget(arr, target) {
     } else {
       return -1;
     }
+  }
+}
+// find in a sorted array the target number, if target not present return the nearest number
+// example : [1,2,6,7,8] Target = 3   return 2
+
+function lookForNearestNumber(arr, target) {
+  let first = 0;
+  let last = arr.length - 1;
+  while (first <= last) {
+    let middle = Math.floor((first + last) / 2);
+    if (middle > target) {
+      first = middle + 1;
+    }
+    if (middle < target) {
+      last = middle - 1;
+    }
+  }
+  if (target - arr[first] <= target - arr[last]) {
+    return arr[first];
+  } else {
+    return arr[last];
   }
 }
