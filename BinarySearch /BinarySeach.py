@@ -16,3 +16,5 @@ def find_nearest (arr, target){
     else:
     return r 
 } 
+
+# given an array of intergers num sorted in ascending order, find the start position of a given target value, if target not found return -1
