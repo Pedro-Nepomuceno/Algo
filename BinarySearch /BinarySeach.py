@@ -6,12 +6,13 @@ def find_nearest (arr, target){
     while l + 1 < r:
         mid = l + (r-1) // 2
         if arr[mid] < target:
-        l = mid
+        r = mid
+      
         else: 
-            r = mid
+            l = mid
     
     if abs(target - arr[l]) <= abs(target - arr[r]):
     return l
     else:
     return r 
-}
+} 
