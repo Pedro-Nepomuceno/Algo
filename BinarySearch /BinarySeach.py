@@ -7,7 +7,6 @@ def find_nearest (arr, target){
         mid = l + (r-1) // 2
         if arr[mid] < target:
         r = mid
-      
         else: 
             l = mid
     
@@ -18,3 +17,19 @@ def find_nearest (arr, target){
 } 
 
 # given an array of intergers num sorted in ascending order, find the start position of a given target value, if target not found return -1
+
+def find_the_first (arr, target){
+    l, r = 0, len(arr)-1
+    while l + 1 < r:
+        mid = (l+r)// 2
+        if arr[mid] == target:
+        r = mid
+      elif: arr[mid] < target 
+      l = mid
+        else: 
+            r = mid
+    
+    if arr[l] == target: return l 
+    if arr[r] == target: return r
+    return -1
+} 
