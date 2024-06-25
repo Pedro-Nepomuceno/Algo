@@ -10,3 +10,12 @@ const tree = {
     { title: "D" }, // leaf
   ],
 };
+
+function treeTraversal2(node) {
+  console.log("node", node.title);
+  if (node.children) {
+    node.children.forEach((child) => {
+      treeTraversal2(child);
+    });
+  }
+}
