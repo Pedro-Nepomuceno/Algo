@@ -30,4 +30,5 @@ function multipleWords(arr) {
       }
     }
   }
+  return [...max];
 }
