@@ -1,4 +1,4 @@
-// given an array, find if array has pattern. either 2,4,6,8 || 2,9,27
+// given an array, find if array has pattern. either 2,4,6,8 || 3,9,27
 // return -1 if no pattern
 
 function mathPattern(arr) {

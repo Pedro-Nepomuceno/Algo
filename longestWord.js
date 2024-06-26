@@ -12,3 +12,22 @@ function longerWord(str) {
 
   return longest;
 }
+// another solution with multiple words
+
+function multipleWords(arr) {
+  let count = 0;
+  let max = [" "];
+  let words = arr.split(" ");
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length >= count) {
+      count = words[i].length;
+      if (max[max.length - 1] < words[i]) {
+        max = [];
+        max.push(words[i]);
+      } else {
+        max = [...max, max[words[i]]];
+      }
+    }
+  }
+}
