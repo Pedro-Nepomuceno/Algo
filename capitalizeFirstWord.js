@@ -10,3 +10,11 @@ function capitalizeFirstLetter(str) {
 
   return arrWords.join(" ");
 }
+
+// another solution
+
+function shorterVersion(str) {
+  let words = str.split(" ").map((word) => {
+    return word.charAt(0).toUpperCase + word.slice(1);
+  });
+}
