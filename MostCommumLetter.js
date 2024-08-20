@@ -36,4 +36,7 @@ function FindMostCommum2(str) {
     }
   }
   return maxChar;
+  console.log(maxChar);
 }
+
+console.log(FindMostCommum2("apple"));
