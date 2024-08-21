@@ -21,3 +21,26 @@ const chunckArray: arrProcessor = (numbers, divisor) => {
 
   return newArray;
 };
+interface ArrayProcessor {
+  (numbers: number[], divisor: number): number[][];
+}
+
+const chunkArray: ArrayProcessor = (numbers, divisor) => {
+  const result: number[][] = [];
+  let tempChunk: number[] = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    tempChunk.push(numbers[i]);
+
+    // When the temp chunk reaches the divisor size or it's the last element
+    if (tempChunk.length === divisor || i === numbers.length - 1) {
+      result.push([...tempChunk]);
+      tempChunk = [];
+    }
+  }
+
+  return result;
+};
+
+// Example usage:
+console.log(chunkArray([1, 2, 3, 4, 5, 6, 7], 3));
