@@ -30,3 +30,12 @@ function checkAnagram(strA, strB) {
   }
   return true;
 }
+
+//simple version
+
+function cleanStr(str) {
+  return str.toLowerCase().replace(/[\W]/g, "").split("").sort().join("");
+}
+function anotherAnagram(strA, strB) {
+  return cleanStr(strA) === cleanStr(strB);
+}
