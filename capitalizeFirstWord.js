@@ -19,6 +19,16 @@ function shorterVersion(str) {
   });
 }
 
-interface char {
-  (str: string): string;
+function asd(str) {
+  let newStr = str.split(" ");
+  newStr.map((word) => {});
 }
+
+function visualizeSplit(str) {
+  newStr = str.split(" ");
+  console.log(newStr);
+}
+
+console.log(visualizeSplit("lets see this"));
+
+visualizeSplit("lets see this");
