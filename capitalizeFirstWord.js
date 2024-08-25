@@ -18,3 +18,7 @@ function shorterVersion(str) {
     return word.charAt(0).toUpperCase + word.slice(1);
   });
 }
+
+interface char {
+  (str: string): string;
+}
