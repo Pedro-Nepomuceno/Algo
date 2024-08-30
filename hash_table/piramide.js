@@ -3,10 +3,6 @@
 // with N levels using the character #
 // make sure the steps has space on the right side
 
-// steps(2)
-//      "# "
-//      "## "
-
 function steps(n) {
   for (let row = 1; row <= n; row++) {
     let line = "";
