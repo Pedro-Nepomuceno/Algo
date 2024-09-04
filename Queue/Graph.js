@@ -29,3 +29,23 @@ airports.forEach(addNode);
 routes.forEach((route) => addEdge(...route));
 
 // now find out if there is a route between LAX TO BKK
+
+function bfs(start) {
+  const queue = [start];
+  const visited = new Set();
+
+  while (queue.length > 0) {
+    const airport = queue.shift();
+    const destinations = adjancencyList.get(airport);
+
+    for (const destination of destinations) {
+      if (destination === "BKK") {
+        console.log("found it ");
+      }
+      if (!visited.has(destination)) {
+        visited.add(destination);
+        queue.push(destination);
+      }
+    }
+  }
+}
