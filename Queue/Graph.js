@@ -49,3 +49,17 @@ function bfs(start) {
     }
   }
 }
+
+function dfs(start, visited = new set()) {
+  visited.add(start);
+  const destinations = adjancencyList.get(start);
+  for (const destination of destinations) {
+    if (destination === "BKK") {
+      console.log("found it bkk");
+      return;
+    }
+    if (!visited.has(destination)) {
+      dfs(destination, visited);
+    }
+  }
+}
