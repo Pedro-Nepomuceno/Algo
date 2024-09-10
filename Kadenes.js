@@ -26,3 +26,13 @@ function kadanes(nums) {
   }
   return maxSum;
 }
+function anotherSolution(sums) {
+  let currentSum = 0;
+  let maxSum = sums[0];
+  for (let sum of sums) {
+    currentSum = Math.max(currentSum, 0);
+    currentSum += sum;
+    maxSum = Math.max(currentSum, maxSum);
+  }
+  return maxSum;
+}
