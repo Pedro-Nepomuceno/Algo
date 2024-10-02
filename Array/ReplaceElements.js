@@ -18,3 +18,26 @@
 // Input: arr = [400]
 // Output: [-1]
 // Explanation: There are no elements to the right of index 0.
+
+function replaceElements(arr) {
+  let maxSoFar = -1;
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    const current = arr[i];
+    arr[i] = maxSoFar;
+    maxSoFar = Math.max(maxSoFar, current);
+  }
+
+  return arr;
+}
+// another function 
+
+
+function sortArray(array){
+    let maxSofar = -1;
+    for (let i = array.length-1; i>=0; i--){
+
+    }
+}+
+
+
