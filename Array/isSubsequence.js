@@ -6,3 +6,11 @@
 
 // Input: s = "abc", t = "ahbgdc"
 // Output: true
+
+function checkSubsequence(str, char) {
+  let newArray = str.spli();
+
+  for (let i = 0; i < char.length; i++) {
+    if (newArray.contains())
+  }
+}
