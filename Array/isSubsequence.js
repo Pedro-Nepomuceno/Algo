@@ -24,21 +24,3 @@ function isSubsequence(s, t) {
   }
   return i === s.length;
 }
-
-// function checkSubsequence(str, char) {
-//     let i = 0;
-//     let j = 0
-//        while(i<str.length || j<char.length){
-//            if(str[i] === char[j]){
-//                i++
-//                j++
-//            }
-//            else{
-//                j++
-//            }
-//            if(i>str.length){
-//                return true
-//            }
-//        }
-//    return false
-//      }
