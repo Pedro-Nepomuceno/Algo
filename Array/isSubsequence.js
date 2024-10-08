@@ -7,10 +7,38 @@
 // Input: s = "abc", t = "ahbgdc"
 // Output: true
 
-function checkSubsequence(str, char) {
-  let newArray = str.spli();
+// information I have while iterationg
+// value, index
 
-  for (let i = 0; i < char.length; i++) {
-    if (newArray.contains())
+function isSubsequence(s, t) {
+  let i = 0;
+  let j = 0;
+  while (j < t.length) {
+    if (s[i] === t[j]) {
+      i++;
+    }
+    j++;
+    if (i === s.length) {
+      return true;
+    }
   }
+  return i === s.length;
 }
+
+// function checkSubsequence(str, char) {
+//     let i = 0;
+//     let j = 0
+//        while(i<str.length || j<char.length){
+//            if(str[i] === char[j]){
+//                i++
+//                j++
+//            }
+//            else{
+//                j++
+//            }
+//            if(i>str.length){
+//                return true
+//            }
+//        }
+//    return false
+//      }
