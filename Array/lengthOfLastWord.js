@@ -9,17 +9,19 @@
 // Explanation: The last word is "moon" with length 4.
 
 function lengthLastWord(s) {
-  let lastWord = [];
-  let count = 0;
-  for (let char = 0; i < s.length; i++) {
-    if (!char[i] == "") {
-      count + 1;
-      lastWord.push(char[i]);
-    } else if (char[i] == " " && char[i + 1] !== " ") {
-      lastword = [];
-      count = 0;
-      lastWord.push(char[i + 1]);
-    }
-    return lastWord.length;
+  let length = 0;
+  let i = s.length - 1;
+
+  // Skip trailing spaces
+  while (i >= 0 && s[i] === " ") {
+    i--;
   }
+
+  // Count characters of the last word
+  while (i >= 0 && s[i] !== " ") {
+    length++;
+    i--;
+  }
+
+  return length;
 }
