@@ -11,3 +11,22 @@
 // Input: strs = ["dog","racecar","car"]
 // Output: ""
 // Explanation: There is no common prefix among the input strings.
+
+function longestCommonPrefix(strs) {
+  if (strs.length === 0) return "";
+  if (strs.length === 1) return strs[0];
+
+  // Sort the array
+  strs.sort();
+
+  // Get the first and last string
+  let first = strs[0];
+  let last = strs[strs.length - 1];
+
+  let i = 0;
+  while (i < first.length && first[i] === last[i]) {
+    i++;
+  }
+
+  return first.substring(0, i);
+}
